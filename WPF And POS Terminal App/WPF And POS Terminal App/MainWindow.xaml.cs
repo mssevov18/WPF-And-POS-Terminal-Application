@@ -22,30 +22,29 @@ namespace WPF_And_POS_Terminal_App
     /// </summary>
     public partial class MainWindow : Window
     {
-        private SerialPort port;
-        private System.Windows.Threading.DispatcherTimer timer;
+        //private SerialPort port;
 
         public MainWindow()
         {
-            port = new SerialPort();
-            port.BaudRate = 9600;
-            port.PortName = "COM5";
-            port.Open();
+            //port = new SerialPort();
+            //port.BaudRate = 9600;
+            //port.PortName = "COM5";
+            //port.Open();
 
             InitializeComponent();
 
         }
 
-        private void click(object sender, EventArgs e)
-        {
-            string line = port.ReadLine();
-            COMTextBox.Text = line;
-            if (line == "True")
-                COMRectangle.Fill = Brushes.Green;
-            else if (line == "False")
-                COMRectangle.Fill = Brushes.Yellow;
-            else
-                COMRectangle.Fill = Brushes.Red;
-        }
+        //private void click(object sender, EventArgs e)
+        //{
+        //    string line = port.ReadLine();
+        //    COMTextBox.Text = line;
+        //    if (line == "True")
+        //        COMRectangle.Fill = Brushes.Green;
+        //    else if (line == "False")
+        //        COMRectangle.Fill = Brushes.Yellow;
+        //    else
+        //        COMRectangle.Fill = Brushes.Red;
+        //}
     }
 }
