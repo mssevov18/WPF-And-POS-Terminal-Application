@@ -81,14 +81,13 @@ void loop()
     // LCD Display 20x4 I2C - Test Code
     // The LCD Screen will display the text of your choice.
     lcd20x4.clear();                          // Clear LCD screen.
-    lcd20x4.setCursor(0,0);
-    //lcd20x4.selectLine(2);                    // Set cursor at the begining of line 2
+    //lcd20x4.setCursor(0,0);
+    lcd20x4.selectLine(1);                    // Set cursor at the begining of line 1
     lcd20x4.print("    Circuito.io  ");                   // Print print String to LCD on first line
-    lcd20x4.setCursor(0,1);
-    //lcd20x4.selectLine(3);                    // Set cursor at the begining of line 3
+    //lcd20x4.setCursor(0,1);
+    lcd20x4.selectLine(2);                    // Set cursor at the begining of line 2
     lcd20x4.print("      Rocks!  ");                   // Print print String to LCD on second line
     delay(1000);
-
   }
   else if (menuOption == '3') {
     // RFID Card Reader - RC522 - Test Code
